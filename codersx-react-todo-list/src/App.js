@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import TodoItem from './component/TodoItem'
 class App extends React.Component {
  
   constructor(){
     super();
-    this.TodoItem=['di cho','nấu ăn','học coderx']
+    this.TodoItem=[{title:'đi chợ',isComplete:true},{title:'học tại coderx',isComplete:true},{title:'nấu ăn',isComplete:true}]
   }
   render(){
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
           {
-            this.TodoItem.map(item => <TodoItem title={item}></TodoItem>)
+            this.TodoItem.map(item => <TodoItem item={item}></TodoItem>)
           }
-          
         </header>
       </div>
     );
