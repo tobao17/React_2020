@@ -8,8 +8,6 @@ class App extends React.Component {
     super();
     this.TodoItem=['di cho','nấu ăn','học coderx']
   }
-
-
   render(){
     return (
       <div className="App">
@@ -26,8 +24,6 @@ class App extends React.Component {
       </div>
     );
   }
-  
-
   }
   
 export default App;

@@ -8,13 +8,17 @@
 <body>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <div id="root">
       
     </div>
-    <script>
-        const Hello =React.createElement('div',null,'hello codertokyo' )
+    <script type="text/babel">
+        const Hello =<div className='title'> Hello React...I'm back </div>
+        const image =React.createElement('img',{src:"https://thuthuatnhanh.com/wp-content/uploads/2019/10/hinh-anh-gai-xinh-ha-noi.jpg"})
+        const App =React.createElement('div',null,Hello,image)
         const root =document.getElementById('root');
-        ReactDOM.render(Hello,root) 
+
+        ReactDOM.render(App,root) 
     </script>
 </body>
 </html>
