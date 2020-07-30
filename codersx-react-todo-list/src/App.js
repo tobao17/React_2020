@@ -13,8 +13,12 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           {
-            this.TodoItem.map(item => <TodoItem item={item}></TodoItem>)
+            this.TodoItem.length>0 &&  this.TodoItem.map(item => <TodoItem item={item}></TodoItem>)
           }
+          {
+            this.TodoItem.length===0 && 'Nothing Here!'
+          }
+           
         </header>
       </div>
     );
