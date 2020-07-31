@@ -40,3 +40,32 @@
   text-decoration: line-through;
   opacity: 0.3;
 }
+.red{
+  height :100px;
+  width:100px;
+  background-color: red;
+  opacity:0.1;
+  border-radius:50%;
+  
+  }
+  .yellow{
+  height :100px;
+  width:100px;
+  background-color: yellow;
+  opacity:0.3;
+  border-radius:50%;
+  }
+  .green{
+  height :100px;
+  width:100px;
+  background-color: green;
+  opacity:0.3;
+  border-radius:50%;
+  }
+  div{
+    margin-top:10px;
+  
+  }
+  .active{
+  opacity:1;
+  }
