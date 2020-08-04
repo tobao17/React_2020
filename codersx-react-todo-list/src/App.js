@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={
-      TodoItem:[{title:'đi chợ',isComplete:true},{title:'học tại coderx',isComplete:true},{title:'nấu ăn',isComplete:true}]
+      TodoItem:[{title:4,isComplete:true},{title:'học tại coderx',isComplete:true},{title:'nấu ăn',isComplete:true}]
     };
   
     this.onItemClick=this.onItemClick.bind(this);
@@ -34,7 +34,7 @@ class App extends React.Component {
         <header className="App-header">
           {
            
-            this.state.TodoItem.length>0 &&  this.state.TodoItem.map(item => <TodoItem item={item} onclick={this.onItemClick(item)}></TodoItem>)
+            this.state.TodoItem.length>0 &&  this.state.TodoItem.map(item => <TodoItem key={item.title.toString()} item={item} onclick={this.onItemClick(item)}></TodoItem>)
           }
           {
             this.state.TodoItem.length===0 && 'Nothing Here!'
