@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button } from 'reactstrap';
 import './App.css';
 import TodoItem from './component/TodoItem'
 class App extends React.Component {
@@ -7,10 +7,21 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={
-      TodoItem:[{title:4,isComplete:true},{title:'học tại coderx',isComplete:true},{title:'nấu ăn',isComplete:true}]
+      TodoItem:[{title:"đi chợ",isComplete:true},{title:'học tại coderx',isComplete:true},{title:'nấu ăn',isComplete:true}]
     };
   
     this.onItemClick=this.onItemClick.bind(this);
+  }
+  componentDidMount()
+  {
+
+  this.getdata().then(data=>console.log(data))
+  }
+  async getdata()
+  {
+  var data =await fetch('https://demoexpress200.herokuapp.com/api/books');
+  var data2=await data.json();
+  return data2;
   }
   onItemClick(item)
   {
@@ -39,6 +50,7 @@ class App extends React.Component {
           {
             this.state.TodoItem.length===0 && 'Nothing Here!'
           }
+          <Button>cc</Button>
            
         </header>
       </div>
