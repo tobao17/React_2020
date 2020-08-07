@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="datetime">2:26</div>
+            <div id="ampm">pm</div>
+            <input type="text" onkeyup="this.value = this.value.charAt(0).toUpperCase() + value.slice(1)" id="input" placeholder="Add an item">
+            <button id="button" type="button"><img src="./img/additem4.png"></button>
+         </header>
+            <div id="list">
+ 
+ 
+            <li>
+                 <div class="item">
+                    <div class="complete">
+                     <button id="0.8051399318062664" class="uncheck"></button>
+                    </div>
+ 
+                    <p class="text">Cccc</p>
+ 
+                     <div class="remove">
+                        <button id="0.3170899230829969" class="todo"></button>
+                     </div>
+                  </div>
+               </li></div>
+ 
+            <div id="divline"></div>
+ 
+            <div id="completelist">
+ 
+ 
+            <li>
+                 <div class="item">
+                    <div class="complete">
+                     <button id="0.8726969806337752" class="uncheck"></button>
+                    </div>
+ 
+                    <p class="text">Cccc</p>
+ 
+                     <div class="remove">
+                        <button id="0.8081872844277003" class="todo"></button>
+                     </div>
+                  </div>
+               </li></div>
+         </div>
+</body>
+</html>
+
+<style>
+    body{
+  margin:0;
+  padding:0;
+  top:0;
+  left:0;
+  overflow: hidden;
+}
+
+.container{
+  width:100%;
+  height:1025px;
+  background-image: linear-gradient(#00778A,#000000);
+}
+
+#datetime{
+  color: #FFFFFF;
+  font-size: 40px;
+  width:100%;
+  text-align: center;
+}
+#ampm{
+  position:relative;
+  color: #FFFFFF;
+  font-size: 15px;
+  width:100%;
+  text-align: center;
+  bottom: 30px;
+  left:63px;
+}
+
+header{
+  padding:15px;
+  width:100%;
+  height:140px;
+  background-image: linear-gradient(to bottom right,#04ECEC, #007CE9, #0088FF);
+
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+}
+
+#input{
+  width:100%;
+  height:40px;
+  border:0;
+  background: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  text-indent: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+
+::placeholder {
+    color: #FFFFFF;
+}
+
+#button{
+  position: fixed;
+  top:70px;
+  right: 18px;
+  height: 40px;
+  background-image: url('../../img2/trash2.png') !important;
+  background: transparent;
+  background-position: 13px 6px;
+  background-repeat: no-repeat;
+  width:44px;
+  height:44px;
+  border:0;
+
+}
+#list{
+  padding:15px;
+  padding-top: 140px;
+}
+
+#divline{
+  height: 5px;
+  background:#458397;
+  margin-left:25px;
+  margin-right:25px;
+  border-radius: 5px;
+
+}
+#completelist{
+    padding:15px;
+    padding-top: 10px;
+}
+
+#completelist .uncheck{
+  background-image: url('./img/check7.png') !important;
+  background:#458397;
+  background-position: 4px 6px;
+  background-repeat: no-repeat;
+  width:44px;
+  height:44px;
+  border:0;
+}
+
+.todo {
+background-image: url('./img/trash4.png') !important;
+background:#458397;
+background-position: 13px 6px;
+background-repeat: no-repeat;
+width:44px;
+height:44px;
+border:0;
+}
+
+.done{
+  background-image: url('./img/check7.png') !important;
+  background:#458397;
+  background-position: 4px 6px;
+  background-repeat: no-repeat;
+  width:44px;
+  height:44px;
+  border:0;
+}
+
+.uncheck{
+  background-image: url('./img/uncheck3.png') !important;
+  background:#458397;
+  background-position: 4px 6px;
+  background-repeat: no-repeat;
+  width:44px;
+  height:44px;
+  border:0;
+}
+
+
+.item {
+  display: table;
+  height:50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width:100%;
+  background:#458397;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.complete{
+   display: table-cell;
+   vertical-align: middle;
+   width: 10%;
+   float: left;
+   padding-top: 5px;
+   padding-left:9px;
+
+}
+
+.remove{
+  display: table-cell;
+  vertical-align: middle;
+  float: right;
+  padding-top: 5px;
+  padding-right:12px;
+}
+
+.text{
+  display: table-cell;
+  white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width:100px;
+    overflow: hidden;
+    text-indent:20px;
+    width:100%;
+    vertical-align: middle;
+}
+
+p{
+  color: #C7D3DE;
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{/* margin:0; *//* padding:0; *//* border:0; */vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body,html{width:100%;height:100%}body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:none;margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}ol,ul{list-style:none}hr{border:0;height:1px;background:#ccc}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{margin:0;padding:0;list-style:none;box-sizing:border-box}html,input,select,textarea,button,a{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+
+</style>
