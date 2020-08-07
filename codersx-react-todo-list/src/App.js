@@ -1,9 +1,13 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import './App.css';
-import TodoItem from './component/TodoItem'
+import TrafficLight from './component/TrafficLigth.js'
+const red=1;
+const yellow=2;
+const green=3; 
 class App extends React.Component {
  
+
   constructor(){
     super();
     this.state={
@@ -38,7 +42,7 @@ class App extends React.Component {
       })
   
   }
-  }
+
   render(){
     return (
       <div className="App">
@@ -52,6 +56,7 @@ class App extends React.Component {
           }
           <Button>cc</Button>
            
+
         </header>
       </div>
     );
